@@ -217,8 +217,8 @@ export function ProjectFormFields({
                     </div>
                     {loadingDuration >= 3 && (
                       <div className="text-xs text-muted-foreground mt-2 ml-8">
-                        This is taking longer than usual. You can browse manually
-                        below.
+                        This is taking longer than usual. You can browse
+                        manually below.
                       </div>
                     )}
                   </div>
@@ -237,21 +237,24 @@ export function ProjectFormFields({
                 )}
 
                 {/* No repos found state */}
-                {!loading && hasSearched && allRepos.length === 0 && !reposError && (
-                  <div className="p-4 border rounded-lg bg-card">
-                    <div className="flex items-start gap-3">
-                      <Folder className="h-5 w-5 mt-0.5 flex-shrink-0 text-muted-foreground" />
-                      <div>
-                        <div className="text-sm text-muted-foreground">
-                          No repositories found in common locations.
-                        </div>
-                        <div className="text-xs text-muted-foreground mt-1">
-                          Use the option below to browse for a repository.
+                {!loading &&
+                  hasSearched &&
+                  allRepos.length === 0 &&
+                  !reposError && (
+                    <div className="p-4 border rounded-lg bg-card">
+                      <div className="flex items-start gap-3">
+                        <Folder className="h-5 w-5 mt-0.5 flex-shrink-0 text-muted-foreground" />
+                        <div>
+                          <div className="text-sm text-muted-foreground">
+                            No repositories found in common locations.
+                          </div>
+                          <div className="text-xs text-muted-foreground mt-1">
+                            Use the option below to browse for a repository.
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
                 {/* Browse for repository card */}
                 <div
