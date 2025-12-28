@@ -158,9 +158,7 @@ impl EditorConfig {
                     "{scheme}://vscode-remote/ssh-remote+{user_part}{remote_host}{path_str}{line_col}"
                 ))
             }
-            EditorType::Zed => {
-                Some(format!("zed://ssh/{user_part}{remote_host}{path_str}"))
-            }
+            EditorType::Zed => Some(format!("zed://ssh/{user_part}{remote_host}{path_str}")),
             _ => None,
         }
     }
